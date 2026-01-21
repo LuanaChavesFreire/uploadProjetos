@@ -49,6 +49,47 @@
       </nav>
     </aside>
 
-    <script defer src="script.js"></script>
+    <main>
+      <div class="containerUploadImagem">
+        <div class="containerImagem">
+          <img src="img/imagem1.png" alt="" class="mainImagem" />
+        </div>
+        <button id="uploadBtn">Carregar Imagem</button>
+        <input type="file" id="imageUpload" accept="image/">
+        <div class="containerImagemNome">
+          <p>image_projeto.png</p>
+          <img src="img/close.svg" alt="" />
+        </div>
+      </div>
+      <div class="containerDescricao">
+        <h2>Novo Projeto</h2>
+        <form>
+          <div>
+            <label for="nome">Nome do Projeto</label>
+            <input type="text" id="nome" name="nome" />
+          </div>
+          <div>
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="descricao"></textarea>
+          </div>
+          <div>
+            <label for="categoria">Tags</label>
+            <input type="text" id="categoria" name="categoria" />
+          </div>
+          <ul class="listaTags">
+            <li>
+              <p>Front-End</p>
+              <img src="img/close-black.svg" alt="" />
+            </li>
+          </ul>
+          <div class="containerBotoes">
+            <button class="botaoDescartar">Descartar</button>
+            <button class="botaoPublicar">Publicar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script defer src="scripts.js"></script>
   </body>
 </html>
