@@ -1,0 +1,65 @@
+:root {
+    --bgColor: #00090e;
+    --txtColor: #e1e1e1;
+    --primaryColor: #81fe88;
+    --secondaryColor: #888888;
+    --tag-color: #171d1f;
+    --fontFamily: 'Prompt', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    font-family: var(--fontFamily);
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    height: 100vh;
+    gap: 27px;
+    padding: 56px 0;
+}
+
+aside {
+    background-color: var(--tag-color);
+    border-radius: 10px;
+    height: 100%;
+    padding: 40px 16px;
+    text-align: center;
+}
+
+.listaLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+    align-items: center;
+    list-style-type: none;
+}
+
+.listaLinks li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-size: 22px;
+}
+
+
+.listaLinks li:first-of-type a {
+    padding: 12px 20px;
+    border: 2px solid var(--primaryColor);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    color: var(--primaryColor);
+}
