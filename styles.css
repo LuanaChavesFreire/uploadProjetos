@@ -111,6 +111,7 @@ textarea {
 
 .listaTags {
   display: flex;
+  gap: 5px;
 }
 
 .listaTags li {
