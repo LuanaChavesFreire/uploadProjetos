@@ -4,7 +4,7 @@ const mainImagem = document.querySelector(".mainImagem");
 const nomeImagem = document.querySelector(".containerImagemNome p");
 const inputTag = document.getElementById("categoria");
 const listaTags = document.getElementById("listaTags");
-const mensagemTagVazia = document.getElementById("mensagemTagVazia");
+const btnPublicar = document.querySelector(".botaoPublicar");
 
 const tagsDisponiveis = [
   "Front-end",
@@ -53,19 +53,8 @@ listaTags.addEventListener("click", (evento) => {
     listaTags.removeChild(tagRemovida);
   }
 
-  verificaListaTag();
+
 });
-
-function verificaListaTag() {
-  const contaTags = listaTags.querySelectorAll("li");
-  if (contaTags.length === 0) {
-    mensagemTagVazia.style.display = "block";
-  } else {
-    mensagemTagVazia.style.display = "none";
-  }
-}
-
-verificaListaTag();
 
 async function verificaTags(tagTexto) {
   return new Promise((resolve) => {
@@ -96,7 +85,4 @@ inputTag.addEventListener("keypress", async (evento) => {
       }
     }
   }
-
-  verificaListaTag();
 });
-
