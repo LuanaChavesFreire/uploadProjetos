@@ -52,8 +52,6 @@ listaTags.addEventListener("click", (evento) => {
     const tagRemovida = evento.target.parentElement;
     listaTags.removeChild(tagRemovida);
   }
-
-
 });
 
 async function verificaTags(tagTexto) {
@@ -84,5 +82,37 @@ inputTag.addEventListener("keypress", async (evento) => {
         alert("Erro ao verificar a existencia da tag, verifique o console.");
       }
     }
+  }
+});
+
+async function publicarProjeto(nomeProjeto, descricaoProjeto, tagsProjeto) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const deuCerto = Math.random() > 0.5;
+      if (deuCerto) {
+        resolve("Projeto publicado com sucesso");
+      } else {
+        reject("Erro ao publicar projeto");
+      }
+    }, 2000);
+  });
+}
+
+btnPublicar.addEventListener("click", async (evento) => {
+  evento.preventDefault();
+  const nomeProjeto = document.getElementById("nome").value;
+  const descricao = document.getElementById("descricao").value;
+  const tagsProjeto = Array.from(listaTags.querySelectorAll("p")).map(
+    (tag) => tag.textContent,
+  );
+
+  try {
+    const resultado = await publicarProjeto(nomeProjeto, descricao, tagsProjeto)
+    console.log(resultado)
+    alert('Deu tudo certo')
+  }
+  catch(error) {
+    console.log(error)
+    alert('deu tudo errado')
   }
 });
