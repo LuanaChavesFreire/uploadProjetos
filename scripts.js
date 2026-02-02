@@ -5,6 +5,7 @@ const nomeImagem = document.querySelector(".containerImagemNome p");
 const inputTag = document.getElementById("categoria");
 const listaTags = document.getElementById("listaTags");
 const btnPublicar = document.querySelector(".botaoPublicar");
+const btnDescartar = document.querySelector(".botaoDescartar")
 
 const tagsDisponiveis = [
   "Front-end",
@@ -116,3 +117,12 @@ btnPublicar.addEventListener("click", async (evento) => {
     alert('deu tudo errado')
   }
 });
+
+btnDescartar.addEventListener('click', async (evento) => {
+  evento.preventDefault();
+  const formulario = document.querySelector('form');
+  formulario.reset()
+  mainImagem.src = './img/imagem1.png'
+  nomeImagem.textContent = 'imagem_projeto.png'
+  listaTags.innerHTML = ''
+})
